@@ -1,0 +1,2 @@
+﻿$Storage = Get-ChildItem F:\Storage\Place -Directory -Recurse | Where-Object {(Get-Acl $_.FullName).Access | Where-Object {($_.IdentityReference -eq 'ttit\szutkoi') -and $_.IsInherited -eq $false} }
+$Storage | ForEach-Object -Process {$acc = (Get-Acl $_.FullName).Access | Where-Object {($_.IdentityReference -eq 'ttit\szutkoi')};$FN = $_.FullName ;$AC = $acc.FileSystemRights; $AT = $acc.AccessControlType ;echo "$FN .... ($AT/$AC)"} 

@@ -1,0 +1,2 @@
+﻿Invoke-Command -ComputerName 'l0607' -Credential 'ttit\pokon'  `
+-ScriptBlock {Get-WmiObject -Namespace ROOT\CCM\SoftMgmtAgent -Query “Select Size from CacheConfig” | Select-Object -ExpandProperty “Size”}

@@ -1,0 +1,1 @@
+﻿Get-Content C:\pokon\kania.csv | Get-ADUser  | Select-Object SamAccountName, enabled | Out-File c:\pokon\kania.txt

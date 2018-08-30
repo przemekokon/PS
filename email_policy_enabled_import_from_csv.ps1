@@ -1,0 +1,1 @@
+﻿Import-Csv d:\przemo\nowy.csv | foreach {set-Mailbox -Identity $_.alias -EmailAddressPolicyEnabled $true}
