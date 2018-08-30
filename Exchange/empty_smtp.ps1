@@ -9,8 +9,8 @@ if ((Get-Content -Path c:\pokon\smtp\out2.txt) -ne $null)
 #Wysylka maila
 {
 
-$From = 'pokon@tt.com.pl'
-$To = 'pokon@promison.com'
+$From = 'mail address'
+$To = 'another mail address'
 $Subject = 'Konta bez adresu SMTP'
 $Body = 'Get-Content -Path C:\pokon\smtp\out2.txt -Raw'
 $SMTPServer = 'poczta.tt.com.pl'
