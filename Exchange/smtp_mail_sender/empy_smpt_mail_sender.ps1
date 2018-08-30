@@ -12,11 +12,11 @@ Get-Mailbox 3> C:\skrypt\smtp_mail_sender\out.txt -ResultSize Unlimited | Where-
 if ((Get-Content -Path C:\skrypt\smtp_mail_sender\out.txt) -ne $null) 
 #Wysylka maila
 {
-$From = 'smtp_mail_sender@tt.com.pl'
-$To = 'powiadomienia@promison.com'
+$From = 'smtp_mail_sender@domain.com'
+$To = 'powiadomienia@domain.com'
 $Subject = 'Konta bez adresu SMTP'
 $Body = Get-Content -Path C:\skrypt\smtp_mail_sender\out.txt -Raw
-$SMTPServer = 'poczta.tt.com.pl'
+$SMTPServer = 'nasz_host_smtp'
 $SMTPPort = '587'
 #$Credential = $credentials
 
