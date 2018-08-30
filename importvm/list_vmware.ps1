@@ -11,7 +11,7 @@ TD {border-width: 1px; padding: 3px; border-style: solid; border-color: black;}
 $global:i=0
 #import credentiali
 $import_pass = Get-Content C:\skrypt\importvm\pass2.txt | ConvertTo-SecureString
-$cred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList 'ttit\listvm',$import_pass
+$cred = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList 'domain\user',$import_pass
 #podpiecie do serwera
 Connect-VIServer nazwa_serwera -Credential $cred
 
