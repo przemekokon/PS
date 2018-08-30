@@ -1,0 +1,1 @@
+﻿Send-MailMessage -From [pokon@tt.com.pl] -To [pokon@promison.com] -SmtpServer poczta.tt.com.pl -Subject "test"
